@@ -17,13 +17,27 @@
 \DeclareMathOperator{\Ob}{Ob}
 \DeclareMathOperator{\op}{op}
 
+%__ TikZ arrows ___________________________________________
+\newcommand{\equalizer}{}
 \def\equalizer[#1]{%
 	\arrow[#1, shift left=.75ex]
 	\arrow[#1, shift right=.75ex]
 }
 
+\newcommand{\lequalizer}{}
 \def\lequalizer[#1;#2,#3]{%
 	% (l)abelled equalizer
 	\arrow[#1, shift left=.75ex, "#2"]
 	\arrow[#1, shift right=.75ex, "#3"']
+}
+
+\newcommand{\looparrow}{}
+\def\looparrow[#1]{%
+	\arrow[loop, distance=2em, in=#1-35, out=#1+35]
+}
+
+\newcommand{\rooparrow}{}
+\def\looparrow[#1]{%
+	% reverse loop
+	\arrow[loop, distance=2em, in=#1+35, out=#1-35]
 }
