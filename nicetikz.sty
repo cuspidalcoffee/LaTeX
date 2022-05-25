@@ -4,11 +4,14 @@
 \RequirePackage{tikz}
 \RequirePackage{tikz-cd}
 
+\usetikzlibrary{arrows}
+\usetikzlibrary{babel}			% Prevents clashes with Spanish babel package
+\usetikzlibrary{calc}			% Functions in the coordinates
 \usetikzlibrary{patterns}
 \usetikzlibrary{positioning}
-\usetikzlibrary{calc}				% Functions in the coordinates
 
-%__Pre-centered tikz-cd diagrams_____________________________________
+
+
 \@ifclassloaded{beamer}{%
 	\newenvironment{diagram}%
 	{\begin{center}\begin{tikzcd}[ampersand replacement=\&]}%
@@ -20,14 +23,10 @@
 	{\end{tikzcd}\end{center}}%
 }
 
-%__Display style functions___________________________________________
-	% Row separation is set to -1mm by default, in an attempt to
-	% mimic the way display style functions are written. Separation
-	% can be set manually (requires units).
+% Row separation is set to -1mm by default, in an attempt to mimic the way
+% display style functions are written.
+% Separation can be set manually (requires units).
 
 \newenvironment{function}[1][-1mm]%
 {\begin{center}\begin{tikzcd}[row sep=#1]}%
 {\end{tikzcd}\end{center}}
-
-%__Commutative diagrams using Tikzpicture____________________________
-\usetikzlibrary{arrows}
