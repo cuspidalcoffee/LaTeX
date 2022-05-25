@@ -10,8 +10,6 @@
 \usetikzlibrary{patterns}
 \usetikzlibrary{positioning}
 
-
-
 \@ifclassloaded{beamer}{%
 	\newenvironment{diagram}%
 	{\begin{center}\begin{tikzcd}[ampersand replacement=\&]}%
@@ -27,6 +25,6 @@
 % display style functions are written.
 % Separation can be set manually (requires units).
 
-\newenvironment{function}[1][-1mm]%
+\newenvironment{funcion}[1][-1mm]%
 {\begin{center}\begin{tikzcd}[row sep=#1]}%
 {\end{tikzcd}\end{center}}
