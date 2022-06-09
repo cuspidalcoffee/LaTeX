@@ -1,23 +1,26 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{cattheo}[2022/03/04 Some operators for category theory]
 
-\DeclareMathOperator{\Ab}{Ab}
-\DeclareMathOperator{\CRng}{CRng}
-\DeclareMathOperator{\Grp}{Grp}
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\Field}{Field}
-\DeclareMathOperator{\Mat}{Mat}
-\DeclareMathOperator{\PSh}{PSh}
-\DeclareMathOperator{\Rng}{Rng}
-\DeclareMathOperator{\Set}{Set}
-\DeclareMathOperator{\Top}{Top}
-\DeclareMathOperator{\Vect}{Vect}
+% == Categories ===================
+\DeclareMathOperator{\Ab}{Ab}		% Abelian groups
+\DeclareMathOperator{\CRng}{CRng}	% Commutative rings
+\DeclareMathOperator{\Field}{Fld}	% Fields
+\DeclareMathOperator{\Grp}{Grp}		% Groups
+\DeclareMathOperator{\Hom}{Hom}		% Homomorphisms
+\DeclareMathOperator{\Mat}{Mat}		% Matrices
+\DeclareMathOperator{\PSh}{PSh}		% Presheaves
+\DeclareMathOperator{\Rng}{Rng}		% Rings
+\DeclareMathOperator{\Set}{Set}		% Sets
+\DeclareMathOperator{\Top}{Top}		% Topological spaces
+\DeclareMathOperator{\Vect}{Vect}	% Vector spaces
 
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\Ob}{Ob}
-\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\id}{id}		% Identity
+\DeclareMathOperator{\Ob}{Ob}		% Objects
+\DeclareMathOperator{\op}{op}		% Opposite category («turn arrows around»)
 
 %__ TikZ arrows ___________________________________________
+% The best way to define custom arrows on TikZ seems to be using TeX's \def
+
 \newcommand{\equalizer}{}
 \def\equalizer[#1]{%
 	\arrow[#1, shift left=.75ex]
