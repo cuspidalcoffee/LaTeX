@@ -11,20 +11,53 @@
 \usetikzlibrary{positioning}
 
 \@ifclassloaded{beamer}{%
-	\newenvironment{diagram}%
-	{\begin{center}\begin{tikzcd}[ampersand replacement=\&]}%
-	{\end{tikzcd}\end{center}}%
-}%
-{%
-	\newenvironment{diagram}%
-	{\begin{center}\begin{tikzcd}}%
-	{\end{tikzcd}\end{center}}%
+	\PackageWarning{nicetikz}{%
+		Beamer CLASS detected!\MessageBreak
+		Remember to use an ampersand replacement\MessageBreak
+		to avoid conflicts in the following packages:\MessageBreak
+		- diagram\MessageBreak
+		- function\MessageBreak%
+	}
 }
+
+\newenvironment{diagram}%
+	{%
+		\begin{equation}%
+		\begin{tikzcd}%
+	}%
+	{%
+		\end{tikzcd}%
+		\end{equation}%
+	}
+		
+\newenvironment{diagram*}%
+	{%
+		\begin{equation*}%
+		\begin{tikzcd}%
+	}%
+	{%
+		\end{tikzcd}%
+		\end{equation*}%
+	}
 
 % Row separation is set to -1mm by default, in an attempt to mimic the way
 % display style functions are written.
 % Separation can be set manually (requires units).
 
-\newenvironment{funcion}[1][-1mm]%
-{\begin{center}\begin{tikzcd}[row sep=#1]}%
-{\end{tikzcd}\end{center}}
+\newenvironment{function}[1][-1mm]{%
+	\begin{equation}%
+	\begin{tikzcd}[row sep=#1]%
+}%
+{%
+	\end{tikzcd}%
+	\end{equation}%
+}
+
+\newenvironment{function*}[1][-1mm]{%
+	\begin{equation*}%
+	\begin{tikzcd}[row sep=#1]%
+}%
+{%
+	\end{tikzcd}%
+	\end{equation*}%
+}
