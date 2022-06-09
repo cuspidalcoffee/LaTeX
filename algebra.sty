@@ -1,33 +1,58 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{algebra}[2021/09/08 Some operators for algebra]
 
-%__Commutative algebra_______________________________________________
-\DeclareMathOperator{\ass}{Ass}				%Associated primes
-\DeclareMathOperator{\length}{length}		%Length of a module
-\DeclareMathOperator{\height}{ht}			%Height of an ideal
-\DeclareMathOperator{\pd}{pd}				%Projective dimension
-\DeclareMathOperator{\depth}{depth}			%Depth
-\DeclareMathOperator{\Ann}{Ann}				%Annihilator
-\DeclareMathOperator{\Rad}{Rad}				%Annihilator
-\DeclareMathOperator{\len}{len}				%Annihilator
-\DeclareMathOperator{\Hom}{Hom}				%Annihilator
-\DeclareMathOperator{\Spec}{Spec}			%Spectre
-\DeclareMathOperator{\Soc}{Soc}			%Spectre
-\DeclareMathOperator{\Max}{Max}				%Spectre
-\DeclareMathOperator{\supp}{Supp}			%Support
-\DeclareMathOperator{\Nil}{Nil}				%Nilradical
-\newcommand{\mfm}{\mf{m}} 					%Maximal ideal
+% == Commands ======================
+\newcommand{\la}{\left\langle}			% Left angle bracket
+\newcommand{\ra}{\right\rangle}			% Right angle bracket
+\newcommand{\mfm}{\mf{m}} 				% Maximal ideal
 
-%__Linear algebra____________________________________________________
-\DeclareMathOperator{\Gl}{Gl}				%Linear group
-\DeclareMathOperator{\End}{End}				%Endomorphisms
-\DeclareMathOperator{\rk}{rk}				%Rank
-\DeclareMathOperator{\im}{Im}				%Image
-\newcommand{\m}[2]{\mathcal{M}_{#1}(#2)}	%Ring of matrices
-\newcommand{\la}{\left\langle}				%Left antilambda
-\newcommand{\ra}{\right\rangle}				%Right antilambda
-\DeclareMathOperator{\sgn}{sgn}				%Signature
-\DeclareMathOperator{\Sp}{Sp}				%Linear span
-\DeclareMathOperator{\ord}{ord}				%Order
-\DeclareMathOperator{\Alt}{Alt}				%Alternate
-\DeclareMathOperator{\codim}{codim}			%Codimension
+% == Operators ======================
+%__A__
+\DeclareMathOperator{\Alt}{Alt}			% Alternate part
+\DeclareMathOperator{\Ann}{Ann}			% Annihilator
+\DeclareMathOperator{\Ass}{Ass}			% Associated primes
+
+%__C__
+\DeclareMathOperator{\codim}{codim}		% Codimension
+
+%__D__
+\DeclareMathOperator{\depth}{depth}		% Depth
+
+%__E__
+\DeclareMathOperator{\End}{End}			% Ring of endomorphisms
+
+%__G__
+\DeclareMathOperator{\Gl}{Gl}			% Linear group
+
+%__H__
+\DeclareMathOperator{\height}{ht}		% Height of an ideal
+\DeclareMathOperator{\Hom}{Hom}			% Ring of homomorphisms
+
+%__I__
+\DeclareMathOperator{\im}{Im}			% Image
+
+%__L__
+\DeclareMathOperator{\length}{length}	% Length of a module
+
+%__M__
+\DeclareMathOperator{\Max}{Max}			% Maximal submodules
+
+%__N__
+\DeclareMathOperator{\Nil}{Nil}			% Nilradical
+
+%__O__
+\DeclareMathOperator{\ord}{ord}			% Order
+
+%__P__
+\DeclareMathOperator{\pd}{pd}			% Projective dimension
+
+%__R__
+\DeclareMathOperator{\Rad}{Rad}			% Radical of an ideal
+\DeclareMathOperator{\rk}{rk}			% Rank
+
+%__S__
+\DeclareMathOperator{\Soc}{Soc}			% Socle of a module
+\DeclareMathOperator{\sgn}{sgn}			% Signature
+\DeclareMathOperator{\Sp}{Sp}			% Span
+\DeclareMathOperator{\Spec}{Spec}		% Spectre of a ring
+\DeclareMathOperator{\supp}{Supp}		% Support
