@@ -1,13 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{fonts}[2022/04/11 Shorthand for mathematical fonts]
+\RequirePackage{amssymb}
 
 % __ AMS fonts ______________________________________________________
-% Amsmath already loads amsfonts by default.
-\@ifpackageloaded{amsmath}%
-	{}%
-	{\RequirePackage{amsfonts}}
-
-
 \newcommand{\mb}[1]{\mathbb{#1}}			% Blackboard («field font»)
 \newcommand{\mc}[1]{\mathcal{#1}}			% Calligraphic
 \newcommand{\mf}[1]{\mathfrak{#1}}			% Fraktur («gothic»)
