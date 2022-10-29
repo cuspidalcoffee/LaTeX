@@ -1,0 +1,15 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{xano}[2022/10/29 %
+	Paquet per afegir al xano als teus documents]
+
+\RequirePackage{graphicx}
+\RequirePackage{amsthm}
+
+\newcommand{\xano}
+	{\raisebox{-.25em}
+	{\includegraphics[height=1em]{xano.png}}
+		\hspace{1ex}}
+\renewcommand{\qed}
+	{\begin{flushright}
+		\xano
+	\end{flushright}}
