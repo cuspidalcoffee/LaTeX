@@ -6,10 +6,15 @@
 \RequirePackage{tikz-cd}
 
 \usetikzlibrary{arrows}
-\usetikzlibrary{babel}			% Prevents clashes with Spanish babel package
+\usetikzlibrary{babel}			% Prevents clashes babel packages
 \usetikzlibrary{calc}			% Functions in the coordinates
 \usetikzlibrary{patterns}
 \usetikzlibrary{positioning}
+
+% Automatic displaystyle in TikZ
+\tikzcdset{
+  cells={font=\everymath\expandafter{\the\everymath\displaystyle}},
+}
 
 \@ifclassloaded{beamer}{%
 	\PackageWarning{nicetikz}{%
@@ -21,10 +26,10 @@
 	}
 }
 
-\newenvironment{diagram}%
-	{%
-		\begin{equation}%
-		\begin{tikzcd}%
+\newenvironment{diagram}
+	{
+		\begin{equation}
+		\begin{tikzcd}
 	}%
 	{%
 		\end{tikzcd}%
@@ -35,30 +40,32 @@
 	{%
 		\begin{equation*}%
 		\begin{tikzcd}%
-	}%
-	{%
-		\end{tikzcd}%
-		\end{equation*}%
+	}
+	{
+		\end{tikzcd}
+		\end{equation*}
 	}
 
 % Row separation is set to -1mm by default, in an attempt to mimic the way
 % display style functions are written.
 % Separation can be set manually (requires units).
 
-\newenvironment{funcion}[1][-1mm]{%
-	\begin{equation}%
-	\begin{tikzcd}[row sep=#1]%
-}%
-{%
-	\end{tikzcd}%
-	\end{equation}%
+\newenvironment{funcion}[1][-1mm]
+{
+	\begin{equation}
+	\begin{tikzcd}[row sep=#1]
+}
+{
+	\end{tikzcd}
+	\end{equation}
 }
 
-\newenvironment{funcion*}[1][-1mm]{%
-	\begin{equation*}%
-	\begin{tikzcd}[row sep=#1]%
-}%
-{%
-	\end{tikzcd}%
-	\end{equation*}%
+\newenvironment{funcion*}[1][-1mm]
+{
+	\begin{equation*}
+	\begin{tikzcd}[row sep=#1]
+}
+{
+	\end{tikzcd}
+	\end{equation*}
 }
