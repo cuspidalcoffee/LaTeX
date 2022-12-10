@@ -3,10 +3,18 @@
 \RequirePackage{amsthm}
 
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}[corollary]{Definition}
 \newtheorem{lemma}[corollary]{Lemma}
 \newtheorem{proposition}[corollary]{Proposition}
 \newtheorem{theorem}[corollary]{Theorem}
 
-\newtheorem{example}{Example}[section]
-\newtheorem{remark}{Remark}[section]
+\newtheorem{remark}[corollary]{Remark}
+
+% Everything below this line will be customised!
+
+\makeatletter 
+\def\@endtheorem{\xano\endtrivlist\@endpefalse }
+	% insert `\xano` macro
+\makeatother
+
+\newtheorem{example}[corollary]{Example}
